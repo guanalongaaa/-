@@ -13,6 +13,17 @@
 		F90C226B1EA9DE38007ABC2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90C22691EA9DE38007ABC2E /* Main.storyboard */; };
 		F90C226D1EA9DE38007ABC2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F90C226C1EA9DE38007ABC2E /* Assets.xcassets */; };
 		F90C22701EA9DE38007ABC2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90C226E1EA9DE38007ABC2E /* LaunchScreen.storyboard */; };
+		F90C22791EA9DE58007ABC2E /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90C22781EA9DE58007ABC2E /* BViewController.m */; };
+		F90C227C1EA9E748007ABC2E /* guanal.png in Resources */ = {isa = PBXBuildFile; fileRef = F90C227B1EA9E748007ABC2E /* guanal.png */; };
+		F984576C1EBC5C2B00958041 /* 陈慧娴 - 傻女.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F984576B1EBC5C2B00958041 /* 陈慧娴 - 傻女.mp3 */; };
+		F984576F1EBC5CD200958041 /* AVPlayerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F984576E1EBC5CD200958041 /* AVPlayerObject.m */; };
+		F9BD61C41ECAC881003BCE52 /* DViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BD61C31ECAC881003BCE52 /* DViewController.m */; };
+		F9BD61C61ECAC891003BCE52 /* chatUser.html in Resources */ = {isa = PBXBuildFile; fileRef = F9BD61C51ECAC891003BCE52 /* chatUser.html */; };
+		F9BD61C91ECACDD7003BCE52 /* GoComUrlProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = F9BD61C81ECACDD7003BCE52 /* GoComUrlProtocol.m */; };
+		F9BD61CD1ECAE613003BCE52 /* simple.html in Resources */ = {isa = PBXBuildFile; fileRef = F9BD61CC1ECAE613003BCE52 /* simple.html */; };
+		F9BD61CF1ECAEDCA003BCE52 /* Virsical.js in Resources */ = {isa = PBXBuildFile; fileRef = F9BD61CE1ECAEDCA003BCE52 /* Virsical.js */; };
+		F9DFFD631EB82C9B005076D9 /* CViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DFFD621EB82C9B005076D9 /* CViewController.m */; };
+		F9F7D5281EC471A4004384AD /* NSString+EMOEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F7D5271EC471A4004384AD /* NSString+EMOEmoji.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +37,23 @@
 		F90C226C1EA9DE38007ABC2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F90C226F1EA9DE38007ABC2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F90C22711EA9DE38007ABC2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F90C22771EA9DE58007ABC2E /* BViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BViewController.h; sourceTree = "<group>"; };
+		F90C22781EA9DE58007ABC2E /* BViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
+		F90C227B1EA9E748007ABC2E /* guanal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guanal.png; sourceTree = "<group>"; };
+		F984576B1EBC5C2B00958041 /* 陈慧娴 - 傻女.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "陈慧娴 - 傻女.mp3"; sourceTree = "<group>"; };
+		F984576D1EBC5CD200958041 /* AVPlayerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerObject.h; sourceTree = "<group>"; };
+		F984576E1EBC5CD200958041 /* AVPlayerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerObject.m; sourceTree = "<group>"; };
+		F9BD61C21ECAC881003BCE52 /* DViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DViewController.h; sourceTree = "<group>"; };
+		F9BD61C31ECAC881003BCE52 /* DViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DViewController.m; sourceTree = "<group>"; };
+		F9BD61C51ECAC891003BCE52 /* chatUser.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = chatUser.html; sourceTree = "<group>"; };
+		F9BD61C71ECACDD7003BCE52 /* GoComUrlProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoComUrlProtocol.h; sourceTree = "<group>"; };
+		F9BD61C81ECACDD7003BCE52 /* GoComUrlProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoComUrlProtocol.m; sourceTree = "<group>"; };
+		F9BD61CC1ECAE613003BCE52 /* simple.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = simple.html; sourceTree = "<group>"; };
+		F9BD61CE1ECAEDCA003BCE52 /* Virsical.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Virsical.js; sourceTree = "<group>"; };
+		F9DFFD611EB82C9B005076D9 /* CViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CViewController.h; sourceTree = "<group>"; };
+		F9DFFD621EB82C9B005076D9 /* CViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CViewController.m; sourceTree = "<group>"; };
+		F9F7D5261EC471A4004384AD /* NSString+EMOEmoji.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+EMOEmoji.h"; sourceTree = "<group>"; };
+		F9F7D5271EC471A4004384AD /* NSString+EMOEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+EMOEmoji.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +90,23 @@
 				F90C22641EA9DE37007ABC2E /* AppDelegate.m */,
 				F90C22661EA9DE37007ABC2E /* ViewController.h */,
 				F90C22671EA9DE37007ABC2E /* ViewController.m */,
+				F90C22771EA9DE58007ABC2E /* BViewController.h */,
+				F90C22781EA9DE58007ABC2E /* BViewController.m */,
+				F9DFFD611EB82C9B005076D9 /* CViewController.h */,
+				F9DFFD621EB82C9B005076D9 /* CViewController.m */,
+				F9BD61C21ECAC881003BCE52 /* DViewController.h */,
+				F9BD61C31ECAC881003BCE52 /* DViewController.m */,
+				F9BD61C71ECACDD7003BCE52 /* GoComUrlProtocol.h */,
+				F9BD61C81ECACDD7003BCE52 /* GoComUrlProtocol.m */,
+				F984576D1EBC5CD200958041 /* AVPlayerObject.h */,
+				F984576E1EBC5CD200958041 /* AVPlayerObject.m */,
+				F9F7D5261EC471A4004384AD /* NSString+EMOEmoji.h */,
+				F9F7D5271EC471A4004384AD /* NSString+EMOEmoji.m */,
+				F9BD61CE1ECAEDCA003BCE52 /* Virsical.js */,
+				F9BD61CC1ECAE613003BCE52 /* simple.html */,
+				F9BD61C51ECAC891003BCE52 /* chatUser.html */,
+				F984576B1EBC5C2B00958041 /* 陈慧娴 - 傻女.mp3 */,
+				F90C227B1EA9E748007ABC2E /* guanal.png */,
 				F90C22691EA9DE38007ABC2E /* Main.storyboard */,
 				F90C226C1EA9DE38007ABC2E /* Assets.xcassets */,
 				F90C226E1EA9DE38007ABC2E /* LaunchScreen.storyboard */,
@@ -139,8 +184,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F90C22701EA9DE38007ABC2E /* LaunchScreen.storyboard in Resources */,
+				F9BD61C61ECAC891003BCE52 /* chatUser.html in Resources */,
+				F9BD61CD1ECAE613003BCE52 /* simple.html in Resources */,
+				F9BD61CF1ECAEDCA003BCE52 /* Virsical.js in Resources */,
+				F90C227C1EA9E748007ABC2E /* guanal.png in Resources */,
 				F90C226D1EA9DE38007ABC2E /* Assets.xcassets in Resources */,
 				F90C226B1EA9DE38007ABC2E /* Main.storyboard in Resources */,
+				F984576C1EBC5C2B00958041 /* 陈慧娴 - 傻女.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,9 +201,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9DFFD631EB82C9B005076D9 /* CViewController.m in Sources */,
 				F90C22681EA9DE37007ABC2E /* ViewController.m in Sources */,
+				F9BD61C91ECACDD7003BCE52 /* GoComUrlProtocol.m in Sources */,
+				F9F7D5281EC471A4004384AD /* NSString+EMOEmoji.m in Sources */,
+				F90C22791EA9DE58007ABC2E /* BViewController.m in Sources */,
 				F90C22651EA9DE37007ABC2E /* AppDelegate.m in Sources */,
+				F984576F1EBC5CD200958041 /* AVPlayerObject.m in Sources */,
 				F90C22621EA9DE37007ABC2E /* main.m in Sources */,
+				F9BD61C41ECAC881003BCE52 /* DViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -262,7 +318,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -275,6 +331,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XU5S24857E;
 				INFOPLIST_FILE = "数据传递/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.guanal.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,6 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XU5S24857E;
 				INFOPLIST_FILE = "数据传递/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.guanal.----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -312,6 +370,7 @@
 				F90C22761EA9DE38007ABC2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

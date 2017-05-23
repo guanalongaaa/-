@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>GoCom Javascript Api Demos</title>
+	<link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.2.min.css">
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.4.2.min.js"></script>
+    <script src="js/gocom.js"></script>
+	<script language="javascript">
+	   function gChatUser() {
+		  var user = selectedUserInput.value;
+		  if(user.length > 0) {
+			  GoCom.chatWithUser(user);
+		  } else {
+			  alert('请务必填写你要对话人员的用户帐号');
+		  }
+	   }
+	</script>
+</head>
+<body>
+<div data-role="page" class="jqm-demos" data-quicklinks="true">
+	<div data-role="header" class="jqm-header">	  
+	  <h1>进行对话</h1>
+	  <a href="demo.html" data-rel="back" data-icon="arrow-l" data-iconpos="notext" data-ajax="false">返回</a>
+	</div><!-- /header -->
+    <div role="main" class="ui-content">
+      <form>
+		<div class="ui-field-contain">
+           <label for="selectedUserInput">对话人员:</label>
+           <input type="text" name="selectedUserInput" id="selectedUserInput" placeholder="wangshuang" value="">
+        </div>
+		<a href="#" onclick="gChatUser();" class="ui-btn ui-corner-all">发起</a>
+      </form>
+	</div>
+
+</div><!-- /page -->
+
+</body>
+</html>

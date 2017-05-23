@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    
+    ViewController * viewC = [[ViewController alloc]init];
+    
+    UINavigationController * nai = [[UINavigationController alloc]initWithRootViewController:viewC];
+    nai.navigationBar.backgroundColor = [UIColor whiteColor];
+    
+    nai.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor greenColor] forKey:NSForegroundColorAttributeName];
+    [nai.navigationBar setBackgroundImage:[UIImage imageNamed:@"guanal"] forBarMetrics:UIBarMetricsDefault];
+    
+    
+    self.window.rootViewController = nai;
+    [self.window makeKeyAndVisible];
+    
+    
     return YES;
 }
 

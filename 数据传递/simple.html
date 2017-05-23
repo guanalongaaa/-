@@ -1,0 +1,109 @@
+<html>
+<head>
+    <script type="text/javascript" language="JavaScript" src="Virsical.js">
+    </script>
+</head>
+<body>
+<a href="1.zip" target="_self" download="1.zip">Download test</a>
+<p>
+<hr>
+<p>
+<div>
+
+    <button type="button" onclick="config()">Config</button>
+    <button type="button" onclick="login()">Login</button>
+    <button type="button" onclick="selectImage()">Select image</button>
+    <button type="button" onclick="getLocation()">Get location</button>
+    <button type="button" onclick="captureQR()">Work space</button>
+</div>
+<div>
+    <img id="image1" width="100%" onclick="preview()">
+</div>
+
+<script type="text/javascript">
+
+
+	function config(){
+        
+	    Virsical.ready(function () {
+				alert("config successful");
+			});
+
+	    Virsical.error(function (res) {
+				var msg = res.msg; // 失败原因
+				var code = res.code; // 失败编码
+				alert("fail" + "-" + msg + "-" + code);
+			});
+
+		Virsical.config({
+            debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来。
+            client_id: 'h5test', // 必填，第三方应用接入ID
+            client_secret: 'h5test'// 必填，第三方应用接入秘钥
+		});
+	}
+
+	function login(){
+		Virsical.login({
+			success: function (res) {
+				var info = res.info; // 返回用户信息json
+				alert("Login success" + "-" + info);
+			},
+			fail: function (res) {
+				var msg = res.msg; // 失败原因
+				var code = res.code; // 失败编码
+				alert("Login fail" + "-" + msg + "-" + code);
+			}
+		});
+	}
+
+	function selectImage(){
+		Virsical.selectImage({
+			successCallback: function(res){
+				var localIds = res.localIds;
+				document.getElementById("image1").src = localIds;
+			}
+		});
+	}
+
+	function preview(){
+		Virsical.previewImage({
+			ids: document.getElementById("image1").src
+		});
+	}
+
+	function getLocation(){
+		Virsical.location({
+			success: function (res) {
+				var address = res.addr; // 地址
+				var lat = res.lat; // lat
+				var lng = res.lng; // lng
+				alert("lat:" + lat + "|lng:" + lng + "|address:" + address);
+			},
+			fail: function (res) {
+				var msg = res.msg; // 失败原因
+				var code = res.code; //失败编码
+				alert("fail" + "-" + msg + "-" + code);
+			}
+		});
+	}
+
+	function captureQR(){
+		Virsical.captureQR({
+			success: function (res) {
+				alert("url:" + res.url);
+			},
+			fail: function (res) {
+				var msg = res.msg; // 失败原因
+				var code = res.code; //失败编码
+				alert("fail" + "-" + msg + "-" + code);
+			}
+		});
+	}
+
+
+
+
+</script>
+</body>
+
+</html>
