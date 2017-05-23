@@ -66,7 +66,8 @@
     int a = arc4random()%4;
     NSLog(@"随机数---%d",a);
     if (a == 0) {
-//        exit(2);
+        //添加1/4崩溃几率
+        exit(2);
     }
 
     
