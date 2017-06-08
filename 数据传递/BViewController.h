@@ -13,7 +13,6 @@
 @protocol BViewControllerDelegate <NSObject>
 
 -(void)bViewController:(BViewController *)bVC clickBtnReturn:(NSString *)message;
-
 @end
 
 @interface BViewController : UIViewController

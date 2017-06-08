@@ -8,8 +8,13 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "FCUUID.h"
+//#import "UUID/FCUUID.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
 
 @interface AppDelegate ()
+
+@property (nonatomic, copy)NSString *uuidStr;//获取设备UUID
 
 @end
 
@@ -29,6 +34,13 @@
     nai.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObject:[UIColor greenColor] forKey:NSForegroundColorAttributeName];
     [nai.navigationBar setBackgroundImage:[UIImage imageNamed:@"guanal"] forBarMetrics:UIBarMetricsDefault];
     
+    //获取该app 唯一设备id  (当用户系统重装无效)
+    self.uuidStr = [[NSUserDefaults standardUserDefaults] objectForKey:@"deviceUUID"];
+    if (self.uuidStr.length == 0) {
+        [self deviceUUID];
+    }
+    
+     [AMapServices sharedServices].apiKey = @"b7fad71cece22612ca7baa38d737af93";
     
     self.window.rootViewController = nai;
     [self.window makeKeyAndVisible];
@@ -37,6 +49,41 @@
     return YES;
 }
 
+- (NSString *)deviceUUID
+{
+    //如果内存不在,尝试从本地获取
+    if (self.uuidStr.length==0) {
+        self.uuidStr = [[NSUserDefaults standardUserDefaults] objectForKey:@"deviceUUID"];
+        
+        //如果本地不存在,从FCUUID获取
+        if(self.uuidStr.length==0)
+        {
+            self.uuidStr = [FCUUID uuidForDevice];
+            
+            //如果FCUUID仍不存在,手动生成一个,并保存本地
+            if (self.uuidStr.length ==0) {
+                self.uuidStr = [self stringWithUUID];
+            }
+            
+            [[NSUserDefaults standardUserDefaults] setObject:self.uuidStr forKey:@"deviceUUID"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+        }
+    }
+    return self.uuidStr;
+}
+-(NSString *)stringWithUUID {
+    CFUUIDRef UUIDObject = CFUUIDCreate(NULL);
+    NSString *UUIDString = (NSString *)CFBridgingRelease(CFUUIDCreateString(nil, UUIDObject));
+    CFRelease(UUIDObject);
+    return UUIDString;
+}
+
+-(void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSString *strDeviceToken = [[[[deviceToken description] stringByReplacingOccurrencesOfString: @"<" withString: @""]                  stringByReplacingOccurrencesOfString: @">" withString: @""] stringByReplacingOccurrencesOfString: @" " withString: @""];
+    
+    NSLog(@"%@",strDeviceToken);
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

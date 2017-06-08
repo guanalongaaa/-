@@ -14,8 +14,14 @@
 
 #import "DViewController.h"
 
+#import "locatonViewController.h"
+
 #import <AVFoundation/AVFoundation.h>
 #import "NSString+EMOEmoji.h"
+
+#import "modleView.h"
+#import "UIView+Layout.h"
+#import "SnailPopupController.h"
 
 #define random(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
 
@@ -50,7 +56,7 @@
     
     [self.userStr emo_containsEmoji];
     
-    self.titleArray = @[@"参数传值",@"block传值",@"加载HTML",@""];
+    self.titleArray = @[@"参数传值",@"block传值",@"加载HTML",@"弹出框",@"定位"];
     
     [self creatUI];
     // Do any additional setup after loading the view, typically from a nib.
@@ -67,7 +73,7 @@
     NSLog(@"随机数---%d",a);
     if (a == 0) {
         //添加1/4崩溃几率
-        exit(2);
+//        exit(2);
     }
 
     
@@ -144,13 +150,45 @@
             
             break;
         case 4:
+        {
+            NSLog(@"弹出右滑视图");
+            modleView *sidebar = [self sidebarView];
             
+            sidebar.closeClicked = ^(UIButton *closeButton) {
+                [self.sl_popupController dismissWithDuration:0.25 elasticAnimated:NO];
+            };
+            
+            self.sl_popupController = [SnailPopupController new];
+            self.sl_popupController.layoutType = PopupLayoutTypeLeft;
+            self.sl_popupController.allowPan = YES;
+            [self.sl_popupController presentContentView:sidebar];
+        }
+            
+            break;
+        case 5:
+        {
+            NSLog(@"定位");
+            locatonViewController * LVC = [[locatonViewController alloc]init];
+            [self.navigationController pushViewController:LVC animated:YES];
+            
+        }
             break;
 
             
         default:
             break;
     }
+}
+
+
+- (modleView *)sidebarView {
+    
+    modleView *sidebarView = [modleView new];
+    NSLog(@"X--%f，Y--%f",[[UIScreen mainScreen] bounds].size.width,[[UIScreen mainScreen] bounds].size.height);
+    sidebarView.size = CGSizeMake(375, 375);
+    sidebarView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    sidebarView.models = @[@"我的故事", @"消息中心", @"我的收藏", @"近期阅读", @"离线阅读"];
+    return sidebarView;
 }
 
 
@@ -166,6 +204,7 @@
     self.title = string;
     
 }
+
 
 
 - (void)didReceiveMemoryWarning {
