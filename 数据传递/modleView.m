@@ -79,6 +79,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
+    NSLog(@"标签");
 }
 
 
