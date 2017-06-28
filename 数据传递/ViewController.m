@@ -56,7 +56,7 @@
     
     [self.userStr emo_containsEmoji];
     
-    self.titleArray = @[@"参数传值",@"block传值",@"加载HTML",@"弹出框",@"定位"];
+    self.titleArray = @[@"参数传值",@"block传值",@"加载HTML",@"弹出框",@"定位",@"设置"];
     
     [self creatUI];
     // Do any additional setup after loading the view, typically from a nib.
@@ -170,6 +170,15 @@
             NSLog(@"定位");
             locatonViewController * LVC = [[locatonViewController alloc]init];
             [self.navigationController pushViewController:LVC animated:YES];
+            
+        }
+            break;
+        case 6:
+        {
+          
+//            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=General&path=About"] options:@{UIApplicationOpenURLOptionUniversalLinksOnly:@"YES"} completionHandler:nil];
+            
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{} completionHandler:nil];
             
         }
             break;
