@@ -12,6 +12,10 @@
 //#import "UUID/FCUUID.h"
 #import <AMapFoundationKit/AMapFoundationKit.h>
 
+//#import "NSNotificationCenterdefaultCenter"
+#import <UserNotifications/UserNotifications.h>
+
+
 @interface AppDelegate ()
 
 @property (nonatomic, copy)NSString *uuidStr;//获取设备UUID
@@ -46,8 +50,44 @@
     [self.window makeKeyAndVisible];
     
     
+//    NSOperationQueue *mainQueue = [NSOperationQueuemainQueue];
+//    [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationUserDidTakeScreenshotNotification                                                       object:nilqueue:mainQueue usingBlock:^(NSNotification *note){
+//        
+//        [self jiePing];
+//        
+//    }];
+    
+//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(jiePing) name:UIApplicationUserDidTakeScreenshotNotification object:nil];
+    
+    
     return YES;
 }
+
+
+
+//-(void)jiePing
+//{
+//    
+//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"新建文件夹" message:@"[安全提醒]内含付款码，只适合当面使用。不要截图或分享给他人以保障资金安全。" preferredStyle:UIAlertControllerStyleAlert];
+//    
+//    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"绝不给别人" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+//        return ;
+//    }];
+//    UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"仅我自己用" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+//    }];
+//    
+//    [alertController addAction:cancelAction];
+//    [alertController addAction:otherAction];
+//    [self presentViewController:alertController animated:YES completion:nil];
+//    
+//    
+////    UIAlertView *alertView=[[UIAlertView alloc]initWithTitle:nil message:@"[安全提醒]内含付款码，只适合当面使用。不要截图或分享给他人以保障资金安全。"delegate:selfcancelButtonTitle:@"绝不给别人"otherButtonTitles:@"仅我自己用",nil];
+////    alertView.tag=105;
+////    [alertView show];
+//    
+//    
+//}
+
 
 - (NSString *)deviceUUID
 {

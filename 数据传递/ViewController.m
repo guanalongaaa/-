@@ -23,11 +23,13 @@
 #import "UIView+Layout.h"
 #import "SnailPopupController.h"
 
+#import "CBPic2ker.h"
+
 #define random(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
 
 #define randomColor random(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
 
-@interface ViewController ()<BViewControllerDelegate>
+@interface ViewController ()<BViewControllerDelegate,CBPickerControllerDelegate>
 
 /**
  需要传递的参数
@@ -56,11 +58,21 @@
     
     [self.userStr emo_containsEmoji];
     
-    self.titleArray = @[@"参数传值",@"block传值",@"加载HTML",@"弹出框",@"定位",@"设置"];
+    self.titleArray = @[@"参数传值",@"block传值",@"加载HTML",@"弹出框",@"定位",@"设置",@"CBPic2ker"];
     
     [self creatUI];
     // Do any additional setup after loading the view, typically from a nib.
     
+    NSInteger k = 0;
+    k++;
+    NSLog(@"1 = %ld",k);
+    [self count:k];
+    NSLog(@"3 = %ld",k);
+    
+}
+-(void)count:(NSInteger)k{
+    k++;
+    NSLog(@"2 = %ld",k);
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -70,12 +82,37 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gnotification:) name:@"NSNotificationTitle" object:nil];
     
     int a = arc4random()%4;
-    NSLog(@"随机数---%d",a);
+//    NSLog(@"随机数---%d",a);
     if (a == 0) {
         //添加1/4崩溃几率
 //        exit(2);
     }
 
+    
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(jiePing) name:UIApplicationUserDidTakeScreenshotNotification object:nil];
+    
+}
+
+-(void)jiePing
+{
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"新建文件夹" message:@"[安全提醒]内含付款码，只适合当面使用。不要截图或分享给他人以保障资金安全。" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"绝不给别人" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        return ;
+    }];
+    UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"仅我自己用" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+    }];
+    
+    [alertController addAction:cancelAction];
+    [alertController addAction:otherAction];
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+    
+    //    UIAlertView *alertView=[[UIAlertView alloc]initWithTitle:nil message:@"[安全提醒]内含付款码，只适合当面使用。不要截图或分享给他人以保障资金安全。"delegate:selfcancelButtonTitle:@"绝不给别人"otherButtonTitles:@"仅我自己用",nil];
+    //    alertView.tag=105;
+    //    [alertView show];
+    
     
 }
 
@@ -181,6 +218,16 @@
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:UIApplicationOpenSettingsURLString] options:@{} completionHandler:nil];
             
         }
+        case 7:
+        {
+            
+            CBPhotoSelecterController *controller = [[CBPhotoSelecterController alloc] initWithDelegate:self];
+            controller.columnNumber = 4;
+            controller.maxSlectedImagesCount = 5;
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
+            [self presentViewController:nav animated:YES completion:nil];
+        }
+
             break;
 
             
@@ -214,6 +261,20 @@
     
 }
 
+
+- (void)photoSelecterController:(CBPhotoSelecterController *)pickerController sourceAsset:(NSArray *)sourceAsset {
+    NSLog(@"%lu",(unsigned long)sourceAsset.count);
+    if (sourceAsset.count == 0) {
+        NSLog(@"啥都没选");
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+}
+- (void)photoSelecterDidCancelWithController:(CBPhotoSelecterController *)pickerController {
+    NSLog(@"%ld",(long)pickerController.columnNumber);
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
 
 
 - (void)didReceiveMemoryWarning {

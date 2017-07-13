@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CBEDBA8A9069069725D3D478 /* libPods-数据传递.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7B1009CD463290AAA20B7C /* libPods-数据传递.a */; };
 		F90C22621EA9DE37007ABC2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F90C22611EA9DE37007ABC2E /* main.m */; };
 		F90C22651EA9DE37007ABC2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F90C22641EA9DE37007ABC2E /* AppDelegate.m */; };
 		F90C22681EA9DE37007ABC2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90C22671EA9DE37007ABC2E /* ViewController.m */; };
@@ -15,6 +16,7 @@
 		F90C22701EA9DE38007ABC2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90C226E1EA9DE38007ABC2E /* LaunchScreen.storyboard */; };
 		F90C22791EA9DE58007ABC2E /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90C22781EA9DE58007ABC2E /* BViewController.m */; };
 		F90C227C1EA9E748007ABC2E /* guanal.png in Resources */ = {isa = PBXBuildFile; fileRef = F90C227B1EA9E748007ABC2E /* guanal.png */; };
+		F945FAB91F04FB3F0099871E /* manifest.plist in Resources */ = {isa = PBXBuildFile; fileRef = F945FAB81F04FB3F0099871E /* manifest.plist */; };
 		F984576C1EBC5C2B00958041 /* 陈慧娴 - 傻女.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F984576B1EBC5C2B00958041 /* 陈慧娴 - 傻女.mp3 */; };
 		F984576F1EBC5CD200958041 /* AVPlayerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F984576E1EBC5CD200958041 /* AVPlayerObject.m */; };
 		F9B2A18D1EE54ECD006E1F34 /* modleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B2A18C1EE54ECD006E1F34 /* modleView.m */; };
@@ -50,6 +52,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		488355BFD91C2AE68039A472 /* Pods-数据传递.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-数据传递.debug.xcconfig"; path = "Pods/Target Support Files/Pods-数据传递/Pods-数据传递.debug.xcconfig"; sourceTree = "<group>"; };
+		79E958074130AE561A7F969D /* Pods-数据传递.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-数据传递.release.xcconfig"; path = "Pods/Target Support Files/Pods-数据传递/Pods-数据传递.release.xcconfig"; sourceTree = "<group>"; };
+		BD7B1009CD463290AAA20B7C /* libPods-数据传递.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-数据传递.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F90C225D1EA9DE37007ABC2E /* 数据传递.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "数据传递.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F90C22611EA9DE37007ABC2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F90C22631EA9DE37007ABC2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,6 +68,7 @@
 		F90C22771EA9DE58007ABC2E /* BViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BViewController.h; sourceTree = "<group>"; };
 		F90C22781EA9DE58007ABC2E /* BViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
 		F90C227B1EA9E748007ABC2E /* guanal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guanal.png; sourceTree = "<group>"; };
+		F945FAB81F04FB3F0099871E /* manifest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = manifest.plist; sourceTree = "<group>"; };
 		F984576B1EBC5C2B00958041 /* 陈慧娴 - 傻女.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "陈慧娴 - 傻女.mp3"; sourceTree = "<group>"; };
 		F984576D1EBC5CD200958041 /* AVPlayerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerObject.h; sourceTree = "<group>"; };
 		F984576E1EBC5CD200958041 /* AVPlayerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerObject.m; sourceTree = "<group>"; };
@@ -130,12 +136,22 @@
 				F9F5F47F1EE9232E00D68962 /* JavaScriptCore.framework in Frameworks */,
 				F9F5F4781EE91D8300D68962 /* AMapFoundationKit.framework in Frameworks */,
 				F9F5F4791EE91D8300D68962 /* AMapLocationKit.framework in Frameworks */,
+				CBEDBA8A9069069725D3D478 /* libPods-数据传递.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF4E721EA855F810D6B0DE1E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				488355BFD91C2AE68039A472 /* Pods-数据传递.debug.xcconfig */,
+				79E958074130AE561A7F969D /* Pods-数据传递.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F90C22541EA9DE37007ABC2E = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +160,7 @@
 				F90C225F1EA9DE37007ABC2E /* 数据传递 */,
 				F90C225E1EA9DE37007ABC2E /* Products */,
 				F9F5F47D1EE9232E00D68962 /* Frameworks */,
+				EF4E721EA855F810D6B0DE1E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,6 +202,7 @@
 				F984576E1EBC5CD200958041 /* AVPlayerObject.m */,
 				F9F7D5261EC471A4004384AD /* NSString+EMOEmoji.h */,
 				F9F7D5271EC471A4004384AD /* NSString+EMOEmoji.m */,
+				F945FAB81F04FB3F0099871E /* manifest.plist */,
 				F9BD61CE1ECAEDCA003BCE52 /* Virsical.js */,
 				F9BD61CC1ECAE613003BCE52 /* simple.html */,
 				F9BD61C51ECAC891003BCE52 /* chatUser.html */,
@@ -215,6 +233,7 @@
 				F9F5F4821EE9234E00D68962 /* Security.framework */,
 				F9F5F4801EE9233F00D68962 /* CoreTelephony.framework */,
 				F9F5F47E1EE9232E00D68962 /* JavaScriptCore.framework */,
+				BD7B1009CD463290AAA20B7C /* libPods-数据传递.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -263,9 +282,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F90C22741EA9DE38007ABC2E /* Build configuration list for PBXNativeTarget "数据传递" */;
 			buildPhases = (
+				1C4A5F2897E9834B9A65990B /* [CP] Check Pods Manifest.lock */,
 				F90C22591EA9DE37007ABC2E /* Sources */,
 				F90C225A1EA9DE37007ABC2E /* Frameworks */,
 				F90C225B1EA9DE37007ABC2E /* Resources */,
+				A55D05DFEC0DBF622487E8E0 /* [CP] Embed Pods Frameworks */,
+				C210BB3F61ED401E8DDB5D34 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -327,12 +349,61 @@
 				F9BD61CF1ECAEDCA003BCE52 /* Virsical.js in Resources */,
 				F90C227C1EA9E748007ABC2E /* guanal.png in Resources */,
 				F90C226D1EA9DE38007ABC2E /* Assets.xcassets in Resources */,
+				F945FAB91F04FB3F0099871E /* manifest.plist in Resources */,
 				F90C226B1EA9DE38007ABC2E /* Main.storyboard in Resources */,
 				F984576C1EBC5C2B00958041 /* 陈慧娴 - 傻女.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C4A5F2897E9834B9A65990B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A55D05DFEC0DBF622487E8E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-数据传递/Pods-数据传递-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C210BB3F61ED401E8DDB5D34 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-数据传递/Pods-数据传递-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F90C22591EA9DE37007ABC2E /* Sources */ = {
@@ -480,6 +551,7 @@
 		};
 		F90C22751EA9DE38007ABC2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 488355BFD91C2AE68039A472 /* Pods-数据传递.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XU5S24857E;
@@ -493,9 +565,12 @@
 					"\"$(SRCROOT)/数据传递/UUID\"",
 				);
 				INFOPLIST_FILE = "数据传递/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-Objc";
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.guanalim.official;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -503,6 +578,7 @@
 		};
 		F90C22761EA9DE38007ABC2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79E958074130AE561A7F969D /* Pods-数据传递.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XU5S24857E;
@@ -516,9 +592,12 @@
 					"\"$(SRCROOT)/数据传递/UUID\"",
 				);
 				INFOPLIST_FILE = "数据传递/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "-Objc";
+				OTHER_LDFLAGS = (
+					"-Objc",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.guanalim.official;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
