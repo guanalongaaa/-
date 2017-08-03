@@ -10,10 +10,18 @@
 
 #import "ViewController.h"
 
+//#import <SDWebImage/UIImage+GIF.h>
+//#import "FLAnimatedImageView+WebCache.h"
+#import "FLAnimatedImageView.h"
+#import "FLAnimatedImage.h"
+
 #define IMScreenHeight  [[UIScreen mainScreen] bounds].size.height
 #define IMScreenWidth  [[UIScreen mainScreen] bounds].size.width
 
 @interface BViewController ()
+
+@property (nonatomic, strong) FLAnimatedImageView *gitImgV;
+@property (nonatomic, strong) UIImageView * imgV;
 
 @end
 
@@ -49,8 +57,52 @@
     self.title = self.recText;
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    
+    [self addgifImage];
+    
+    
 }
 
+-(void)addgifImage{
+    
+    self.gitImgV = [[FLAnimatedImageView alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
+    self.gitImgV.center = self.view.center;
+    self.gitImgV.backgroundColor = [UIColor grayColor];
+    [self.view addSubview:self.gitImgV];
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"777" ofType:@"gif"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    
+    self.gitImgV.animatedImage = [FLAnimatedImage animatedImageWithGIFData:data];
+    
+    [self.gitImgV stopAnimating];
+//    self.gitImgV.image = image;
+    
+    self.gitImgV.userInteractionEnabled = YES;
+    
+    UITapGestureRecognizer *doubleTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(doubleTap:)];
+     [doubleTapGestureRecognizer setNumberOfTapsRequired:1];
+    [self.gitImgV addGestureRecognizer:doubleTapGestureRecognizer];
+
+    
+}
+
+
+-(void)doubleTap:(UIGestureRecognizer *)recognizer{
+    NSLog(@"点击");
+//    if (self.gitImgV.isAnimating) {
+//        NSLog(@"停");
+//         [self.gitImgV stopAnimating];
+//    }else
+//    {
+//        NSLog(@"动");
+//         [self.gitImgV startAnimating];
+//    }
+    
+    self.gitImgV.isAnimating? [self.gitImgV stopAnimating]:[self.gitImgV startAnimating];
+    
+}
 
 #pragma mark - UITableViewDelegate
 

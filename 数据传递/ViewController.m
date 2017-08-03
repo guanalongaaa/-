@@ -25,6 +25,9 @@
 
 #import "CBPic2ker.h"
 
+#import <Photos/Photos.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+
 #define random(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
 
 #define randomColor random(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
@@ -69,7 +72,28 @@
     [self count:k];
     NSLog(@"3 = %ld",k);
     
+    
+    UITapGestureRecognizer *doubleTapGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(doubleTap:)];
+    [doubleTapGestureRecognizer setNumberOfTapsRequired:2];
+    [self.view addGestureRecognizer:doubleTapGestureRecognizer];
+    
+    CGRect rect =  CGRectIntegral(CGRectMake(20.3, 22, 104.8, 50));
+    
+    NSLog(@"logRect = %@", NSStringFromCGRect(rect));
+    
 }
+
+
+- (void)doubleTap:(UIGestureRecognizer*)gestureRecognizer
+{
+    [self.view setBackgroundColor:[UIColor blueColor]];
+    
+    locatonViewController * LVC = [[locatonViewController alloc]init];
+    [self.navigationController pushViewController:LVC animated:YES];
+    NSLog(@"-----doubleTap-----");
+}
+
+
 -(void)count:(NSInteger)k{
     k++;
     NSLog(@"2 = %ld",k);
@@ -93,28 +117,90 @@
     
 }
 
--(void)jiePing
-{
+-(void)jiePing{
     
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"新建文件夹" message:@"[安全提醒]内含付款码，只适合当面使用。不要截图或分享给他人以保障资金安全。" preferredStyle:UIAlertControllerStyleAlert];
+    //人为截屏, 模拟用户截屏行为, 获取所截图片
+    UIImage *image_ = [self imageWithScreenshot];
     
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"绝不给别人" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-        return ;
-    }];
-    UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"仅我自己用" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
-    }];
+    //添加显示
+    UIImageView *imgvPhoto = [[UIImageView alloc]initWithImage:image_];
+    imgvPhoto.frame = CGRectMake(self.view.frame.size.width/2, self.view.frame.size.height/2, self.view.frame.size.width/2, self.view.frame.size.height/2);
     
-    [alertController addAction:cancelAction];
-    [alertController addAction:otherAction];
-    [self presentViewController:alertController animated:YES completion:nil];
+    //添加边框
+    CALayer * layer = [imgvPhoto layer];
+    layer.borderColor = [
+                         [UIColor whiteColor] CGColor];
+    layer.borderWidth = 5.0f;
+    //添加四个边阴影
+    imgvPhoto.layer.shadowColor = [UIColor blackColor].CGColor;
+    imgvPhoto.layer.shadowOffset = CGSizeMake(0, 0);
+    imgvPhoto.layer.shadowOpacity = 0.5;
+    imgvPhoto.layer.shadowRadius = 10.0;
+    //添加两个边阴影
+    imgvPhoto.layer.shadowColor = [UIColor blackColor].CGColor;
+    imgvPhoto.layer.shadowOffset = CGSizeMake(4, 4);
+    imgvPhoto.layer.shadowOpacity = 0.5;
+    imgvPhoto.layer.shadowRadius = 2.0;
     
-    
-    //    UIAlertView *alertView=[[UIAlertView alloc]initWithTitle:nil message:@"[安全提醒]内含付款码，只适合当面使用。不要截图或分享给他人以保障资金安全。"delegate:selfcancelButtonTitle:@"绝不给别人"otherButtonTitles:@"仅我自己用",nil];
-    //    alertView.tag=105;
-    //    [alertView show];
-    
+    [self.view addSubview:imgvPhoto];
     
 }
+
+//-(void)jiePing
+//{
+//    
+//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"新建文件夹" message:@"[安全提醒]内含付款码，只适合当面使用。不要截图或分享给他人以保障资金安全。" preferredStyle:UIAlertControllerStyleAlert];
+//    
+//    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"绝不给别人" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+//        return ;
+//    }];
+//    UIAlertAction *otherAction = [UIAlertAction actionWithTitle:@"仅我自己用" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+//        
+//        PHFetchResult *collectonResuts = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum subtype:PHAssetCollectionSubtypeAny options:[PHFetchOptions new]] ;
+//        [collectonResuts enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//            PHAssetCollection *assetCollection = obj;
+//            
+//            PHFetchResult *assetResult = [PHAsset fetchAssetsInAssetCollection:assetCollection options:[PHFetchOptions new]];
+//            [assetResult enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+//                [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+//                    //获取相册的最后一张照片
+//                    if (idx == [assetResult count] - 1) {
+//                        [PHAssetChangeRequest deleteAssets:@[obj]];
+//                    }
+//                } completionHandler:^(BOOL success, NSError *error) {
+//                    NSLog(@"Error: %@", error);
+//                }];
+//            }];
+//            
+////            if ([assetCollection.localizedTitle isEqualToString:@"Camera Roll"])  {
+////                PHFetchResult *assetResult = [PHAsset fetchAssetsInAssetCollection:assetCollection options:[PHFetchOptions new]];
+////                [assetResult enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+////                    [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+////                        //获取相册的最后一张照片
+////                        if (idx == [assetResult count] - 1) {
+////                            [PHAssetChangeRequest deleteAssets:@[obj]];
+////                        }
+////                    } completionHandler:^(BOOL success, NSError *error) {
+////                        NSLog(@"Error: %@", error);
+////                    }];
+////                }];
+////            }
+//        }];
+//        
+//        
+//    }];
+//    
+//    [alertController addAction:cancelAction];
+//    [alertController addAction:otherAction];
+//    [self presentViewController:alertController animated:YES completion:nil];
+//    
+//    
+//    //    UIAlertView *alertView=[[UIAlertView alloc]initWithTitle:nil message:@"[安全提醒]内含付款码，只适合当面使用。不要截图或分享给他人以保障资金安全。"delegate:selfcancelButtonTitle:@"绝不给别人"otherButtonTitles:@"仅我自己用",nil];
+//    //    alertView.tag=105;
+//    //    [alertView show];
+//    
+//    
+//}
 
 
 
@@ -220,7 +306,6 @@
         }
         case 7:
         {
-            
             CBPhotoSelecterController *controller = [[CBPhotoSelecterController alloc] initWithDelegate:self];
             controller.columnNumber = 4;
             controller.maxSlectedImagesCount = 5;
@@ -280,6 +365,70 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+/**
+ *  截取当前屏幕
+ *
+ *  @return NSData *
+ */
+- (NSData *)dataWithScreenshotInPNGFormat
+{
+    CGSize imageSize = CGSizeZero;
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    if (UIInterfaceOrientationIsPortrait(orientation))
+        imageSize = [UIScreen mainScreen].bounds.size;
+    else
+        imageSize = CGSizeMake([UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width);
+    
+    UIGraphicsBeginImageContextWithOptions(imageSize, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    for (UIWindow *window in [[UIApplication sharedApplication] windows])
+    {
+        CGContextSaveGState(context);
+        CGContextTranslateCTM(context, window.center.x, window.center.y);
+        CGContextConcatCTM(context, window.transform);
+        CGContextTranslateCTM(context, -window.bounds.size.width * window.layer.anchorPoint.x, -window.bounds.size.height * window.layer.anchorPoint.y);
+        if (orientation == UIInterfaceOrientationLandscapeLeft)
+        {
+            CGContextRotateCTM(context, M_PI_2);
+            CGContextTranslateCTM(context, 0, -imageSize.width);
+        }
+        else if (orientation == UIInterfaceOrientationLandscapeRight)
+        {
+            CGContextRotateCTM(context, -M_PI_2);
+            CGContextTranslateCTM(context, -imageSize.height, 0);
+        } else if (orientation == UIInterfaceOrientationPortraitUpsideDown) {
+            CGContextRotateCTM(context, M_PI);
+            CGContextTranslateCTM(context, -imageSize.width, -imageSize.height);
+        }
+        if ([window respondsToSelector:@selector(drawViewHierarchyInRect:afterScreenUpdates:)])
+        {
+            [window drawViewHierarchyInRect:window.bounds afterScreenUpdates:YES];
+        }
+        else
+        {
+            [window.layer renderInContext:context];
+        }
+        CGContextRestoreGState(context);
+    }
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return UIImagePNGRepresentation(image);
+}
+
+/**
+ *  返回截取到的图片
+ *
+ *  @return UIImage *
+ */
+- (UIImage *)imageWithScreenshot
+{
+    NSData *imageData = [self dataWithScreenshotInPNGFormat];
+    return [UIImage imageWithData:imageData];
 }
 
 

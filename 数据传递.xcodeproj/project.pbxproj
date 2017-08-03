@@ -17,6 +17,8 @@
 		F90C22791EA9DE58007ABC2E /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90C22781EA9DE58007ABC2E /* BViewController.m */; };
 		F90C227C1EA9E748007ABC2E /* guanal.png in Resources */ = {isa = PBXBuildFile; fileRef = F90C227B1EA9E748007ABC2E /* guanal.png */; };
 		F945FAB91F04FB3F0099871E /* manifest.plist in Resources */ = {isa = PBXBuildFile; fileRef = F945FAB81F04FB3F0099871E /* manifest.plist */; };
+		F96842AF1F288A6600052F0C /* 666.gif in Resources */ = {isa = PBXBuildFile; fileRef = F96842AE1F288A6600052F0C /* 666.gif */; };
+		F96842B11F28938900052F0C /* 777.gif in Resources */ = {isa = PBXBuildFile; fileRef = F96842B01F28938900052F0C /* 777.gif */; };
 		F984576C1EBC5C2B00958041 /* 陈慧娴 - 傻女.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F984576B1EBC5C2B00958041 /* 陈慧娴 - 傻女.mp3 */; };
 		F984576F1EBC5CD200958041 /* AVPlayerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F984576E1EBC5CD200958041 /* AVPlayerObject.m */; };
 		F9B2A18D1EE54ECD006E1F34 /* modleView.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B2A18C1EE54ECD006E1F34 /* modleView.m */; };
@@ -29,6 +31,8 @@
 		F9BD61CD1ECAE613003BCE52 /* simple.html in Resources */ = {isa = PBXBuildFile; fileRef = F9BD61CC1ECAE613003BCE52 /* simple.html */; };
 		F9BD61CF1ECAEDCA003BCE52 /* Virsical.js in Resources */ = {isa = PBXBuildFile; fileRef = F9BD61CE1ECAEDCA003BCE52 /* Virsical.js */; };
 		F9DFFD631EB82C9B005076D9 /* CViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9DFFD621EB82C9B005076D9 /* CViewController.m */; };
+		F9E5EF721F18A5F800755AE5 /* colorTestTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E5EF701F18A5F800755AE5 /* colorTestTableViewCell.m */; };
+		F9E5EF731F18A5F800755AE5 /* colorTestTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E5EF711F18A5F800755AE5 /* colorTestTableViewCell.xib */; };
 		F9F5F4781EE91D8300D68962 /* AMapFoundationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F5F4761EE91D8300D68962 /* AMapFoundationKit.framework */; };
 		F9F5F4791EE91D8300D68962 /* AMapLocationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F5F4771EE91D8300D68962 /* AMapLocationKit.framework */; };
 		F9F5F47C1EE91EBE00D68962 /* locatonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F5F47B1EE91EBE00D68962 /* locatonViewController.m */; };
@@ -69,6 +73,8 @@
 		F90C22781EA9DE58007ABC2E /* BViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
 		F90C227B1EA9E748007ABC2E /* guanal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guanal.png; sourceTree = "<group>"; };
 		F945FAB81F04FB3F0099871E /* manifest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = manifest.plist; sourceTree = "<group>"; };
+		F96842AE1F288A6600052F0C /* 666.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 666.gif; sourceTree = "<group>"; };
+		F96842B01F28938900052F0C /* 777.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 777.gif; sourceTree = "<group>"; };
 		F984576B1EBC5C2B00958041 /* 陈慧娴 - 傻女.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "陈慧娴 - 傻女.mp3"; sourceTree = "<group>"; };
 		F984576D1EBC5CD200958041 /* AVPlayerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVPlayerObject.h; sourceTree = "<group>"; };
 		F984576E1EBC5CD200958041 /* AVPlayerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVPlayerObject.m; sourceTree = "<group>"; };
@@ -88,6 +94,9 @@
 		F9BD61CE1ECAEDCA003BCE52 /* Virsical.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Virsical.js; sourceTree = "<group>"; };
 		F9DFFD611EB82C9B005076D9 /* CViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CViewController.h; sourceTree = "<group>"; };
 		F9DFFD621EB82C9B005076D9 /* CViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CViewController.m; sourceTree = "<group>"; };
+		F9E5EF6F1F18A5F800755AE5 /* colorTestTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = colorTestTableViewCell.h; sourceTree = "<group>"; };
+		F9E5EF701F18A5F800755AE5 /* colorTestTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = colorTestTableViewCell.m; sourceTree = "<group>"; };
+		F9E5EF711F18A5F800755AE5 /* colorTestTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = colorTestTableViewCell.xib; sourceTree = "<group>"; };
 		F9F5F4761EE91D8300D68962 /* AMapFoundationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapFoundationKit.framework; sourceTree = "<group>"; };
 		F9F5F4771EE91D8300D68962 /* AMapLocationKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AMapLocationKit.framework; sourceTree = "<group>"; };
 		F9F5F47A1EE91EBE00D68962 /* locatonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = locatonViewController.h; sourceTree = "<group>"; };
@@ -202,11 +211,16 @@
 				F984576E1EBC5CD200958041 /* AVPlayerObject.m */,
 				F9F7D5261EC471A4004384AD /* NSString+EMOEmoji.h */,
 				F9F7D5271EC471A4004384AD /* NSString+EMOEmoji.m */,
+				F9E5EF6F1F18A5F800755AE5 /* colorTestTableViewCell.h */,
+				F9E5EF701F18A5F800755AE5 /* colorTestTableViewCell.m */,
+				F9E5EF711F18A5F800755AE5 /* colorTestTableViewCell.xib */,
 				F945FAB81F04FB3F0099871E /* manifest.plist */,
 				F9BD61CE1ECAEDCA003BCE52 /* Virsical.js */,
 				F9BD61CC1ECAE613003BCE52 /* simple.html */,
 				F9BD61C51ECAC891003BCE52 /* chatUser.html */,
 				F984576B1EBC5C2B00958041 /* 陈慧娴 - 傻女.mp3 */,
+				F96842B01F28938900052F0C /* 777.gif */,
+				F96842AE1F288A6600052F0C /* 666.gif */,
 				F90C227B1EA9E748007ABC2E /* guanal.png */,
 				F90C22691EA9DE38007ABC2E /* Main.storyboard */,
 				F90C226C1EA9DE38007ABC2E /* Assets.xcassets */,
@@ -349,7 +363,10 @@
 				F9BD61CF1ECAEDCA003BCE52 /* Virsical.js in Resources */,
 				F90C227C1EA9E748007ABC2E /* guanal.png in Resources */,
 				F90C226D1EA9DE38007ABC2E /* Assets.xcassets in Resources */,
+				F96842B11F28938900052F0C /* 777.gif in Resources */,
+				F9E5EF731F18A5F800755AE5 /* colorTestTableViewCell.xib in Resources */,
 				F945FAB91F04FB3F0099871E /* manifest.plist in Resources */,
+				F96842AF1F288A6600052F0C /* 666.gif in Resources */,
 				F90C226B1EA9DE38007ABC2E /* Main.storyboard in Resources */,
 				F984576C1EBC5C2B00958041 /* 陈慧娴 - 傻女.mp3 in Resources */,
 			);
@@ -426,6 +443,7 @@
 				F90C22791EA9DE58007ABC2E /* BViewController.m in Sources */,
 				F9F5F4A01EE9347200D68962 /* AFNetworkReachabilityManager.m in Sources */,
 				F9F5F4A51EE9347200D68962 /* AFURLSessionManager.m in Sources */,
+				F9E5EF721F18A5F800755AE5 /* colorTestTableViewCell.m in Sources */,
 				F90C22651EA9DE37007ABC2E /* AppDelegate.m in Sources */,
 				F984576F1EBC5CD200958041 /* AVPlayerObject.m in Sources */,
 				F9B2A1901EE5521C006E1F34 /* UIView+Layout.m in Sources */,
@@ -563,6 +581,7 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/数据传递/AFNetworking\"",
 					"\"$(SRCROOT)/数据传递/UUID\"",
+					"${SRCROOT}",
 				);
 				INFOPLIST_FILE = "数据传递/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -590,6 +609,7 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/数据传递/AFNetworking\"",
 					"\"$(SRCROOT)/数据传递/UUID\"",
+					"${SRCROOT}",
 				);
 				INFOPLIST_FILE = "数据传递/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

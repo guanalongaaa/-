@@ -1,12 +1,23 @@
 PODS:
   - CBPic2ker (1.0.1)
+  - FLAnimatedImage (1.0.12)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - SDWebImage/GIF (4.0.0):
+    - FLAnimatedImage (~> 1.0)
+    - SDWebImage/Core
 
 DEPENDENCIES:
   - CBPic2ker
+  - SDWebImage (~> 4.0.0)
+  - SDWebImage/GIF
 
 SPEC CHECKSUMS:
   CBPic2ker: 8a8522cca6f16259a46ebcec493fed3db59b05df
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
 
-PODFILE CHECKSUM: c06c20c65f56c57171cd7f47297edbbfdc98fe38
+PODFILE CHECKSUM: fe2cb2c1d9e3f69c05c85a46b2d49df6fa7e52d1
 
 COCOAPODS: 1.1.1
