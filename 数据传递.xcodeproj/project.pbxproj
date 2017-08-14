@@ -16,6 +16,12 @@
 		F90C22701EA9DE38007ABC2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F90C226E1EA9DE38007ABC2E /* LaunchScreen.storyboard */; };
 		F90C22791EA9DE58007ABC2E /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F90C22781EA9DE58007ABC2E /* BViewController.m */; };
 		F90C227C1EA9E748007ABC2E /* guanal.png in Resources */ = {isa = PBXBuildFile; fileRef = F90C227B1EA9E748007ABC2E /* guanal.png */; };
+		F92739761F3AC7EB002E1286 /* jiantou_left.png in Resources */ = {isa = PBXBuildFile; fileRef = F92739731F3AC7EB002E1286 /* jiantou_left.png */; };
+		F92739771F3AC7EB002E1286 /* jiantou_left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F92739741F3AC7EB002E1286 /* jiantou_left@2x.png */; };
+		F92739781F3AC7EB002E1286 /* jiantou_left@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F92739751F3AC7EB002E1286 /* jiantou_left@3x.png */; };
+		F927397C1F3AC93A002E1286 /* service_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F92739791F3AC93A002E1286 /* service_icon.png */; };
+		F927397D1F3AC93A002E1286 /* service_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F927397A1F3AC93A002E1286 /* service_icon@2x.png */; };
+		F927397E1F3AC93A002E1286 /* service_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F927397B1F3AC93A002E1286 /* service_icon@3x.png */; };
 		F945FAB91F04FB3F0099871E /* manifest.plist in Resources */ = {isa = PBXBuildFile; fileRef = F945FAB81F04FB3F0099871E /* manifest.plist */; };
 		F96842AF1F288A6600052F0C /* 666.gif in Resources */ = {isa = PBXBuildFile; fileRef = F96842AE1F288A6600052F0C /* 666.gif */; };
 		F96842B11F28938900052F0C /* 777.gif in Resources */ = {isa = PBXBuildFile; fileRef = F96842B01F28938900052F0C /* 777.gif */; };
@@ -72,6 +78,12 @@
 		F90C22771EA9DE58007ABC2E /* BViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BViewController.h; sourceTree = "<group>"; };
 		F90C22781EA9DE58007ABC2E /* BViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
 		F90C227B1EA9E748007ABC2E /* guanal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guanal.png; sourceTree = "<group>"; };
+		F92739731F3AC7EB002E1286 /* jiantou_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jiantou_left.png; sourceTree = "<group>"; };
+		F92739741F3AC7EB002E1286 /* jiantou_left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jiantou_left@2x.png"; sourceTree = "<group>"; };
+		F92739751F3AC7EB002E1286 /* jiantou_left@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "jiantou_left@3x.png"; sourceTree = "<group>"; };
+		F92739791F3AC93A002E1286 /* service_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = service_icon.png; sourceTree = "<group>"; };
+		F927397A1F3AC93A002E1286 /* service_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service_icon@2x.png"; sourceTree = "<group>"; };
+		F927397B1F3AC93A002E1286 /* service_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "service_icon@3x.png"; sourceTree = "<group>"; };
 		F945FAB81F04FB3F0099871E /* manifest.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = manifest.plist; sourceTree = "<group>"; };
 		F96842AE1F288A6600052F0C /* 666.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 666.gif; sourceTree = "<group>"; };
 		F96842B01F28938900052F0C /* 777.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 777.gif; sourceTree = "<group>"; };
@@ -219,6 +231,12 @@
 				F9BD61CC1ECAE613003BCE52 /* simple.html */,
 				F9BD61C51ECAC891003BCE52 /* chatUser.html */,
 				F984576B1EBC5C2B00958041 /* 陈慧娴 - 傻女.mp3 */,
+				F92739731F3AC7EB002E1286 /* jiantou_left.png */,
+				F92739741F3AC7EB002E1286 /* jiantou_left@2x.png */,
+				F92739751F3AC7EB002E1286 /* jiantou_left@3x.png */,
+				F92739791F3AC93A002E1286 /* service_icon.png */,
+				F927397A1F3AC93A002E1286 /* service_icon@2x.png */,
+				F927397B1F3AC93A002E1286 /* service_icon@3x.png */,
 				F96842B01F28938900052F0C /* 777.gif */,
 				F96842AE1F288A6600052F0C /* 666.gif */,
 				F90C227B1EA9E748007ABC2E /* guanal.png */,
@@ -358,17 +376,23 @@
 			files = (
 				F90C22701EA9DE38007ABC2E /* LaunchScreen.storyboard in Resources */,
 				F9BD61C61ECAC891003BCE52 /* chatUser.html in Resources */,
+				F92739771F3AC7EB002E1286 /* jiantou_left@2x.png in Resources */,
 				F9BD61CD1ECAE613003BCE52 /* simple.html in Resources */,
 				F9B2A1951EE559C5006E1F34 /* qzone_close.png in Resources */,
+				F92739781F3AC7EB002E1286 /* jiantou_left@3x.png in Resources */,
 				F9BD61CF1ECAEDCA003BCE52 /* Virsical.js in Resources */,
 				F90C227C1EA9E748007ABC2E /* guanal.png in Resources */,
 				F90C226D1EA9DE38007ABC2E /* Assets.xcassets in Resources */,
+				F927397D1F3AC93A002E1286 /* service_icon@2x.png in Resources */,
 				F96842B11F28938900052F0C /* 777.gif in Resources */,
 				F9E5EF731F18A5F800755AE5 /* colorTestTableViewCell.xib in Resources */,
 				F945FAB91F04FB3F0099871E /* manifest.plist in Resources */,
+				F927397E1F3AC93A002E1286 /* service_icon@3x.png in Resources */,
 				F96842AF1F288A6600052F0C /* 666.gif in Resources */,
 				F90C226B1EA9DE38007ABC2E /* Main.storyboard in Resources */,
 				F984576C1EBC5C2B00958041 /* 陈慧娴 - 傻女.mp3 in Resources */,
+				F927397C1F3AC93A002E1286 /* service_icon.png in Resources */,
+				F92739761F3AC7EB002E1286 /* jiantou_left.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

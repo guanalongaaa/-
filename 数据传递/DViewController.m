@@ -44,10 +44,41 @@
     
     //http://47.93.34.13:9901/Receipt/rp/creatReceipt.html?token=093b7acc65f12a4d119403ec3de258d1
     
+    NSString * str = [NSString stringWithFormat:@"%@,%@",@"guanal",@"setup"];
+    
+    NSLog(@"%@", str);
+    
+    char *name = "itisgl";
+    
+    NSLog(@"%s",name);
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
 
+    UIButton *closeBtn = [[UIButton alloc] initWithFrame:CGRectMake(30.0 *IMScreenWidth / 320.0, 6.0, 60.0, 32.0)];
+    
+    UIImage *img1 = [UIImage imageNamed:@"service_icon"];
+    [closeBtn setImage:img1 forState:UIControlStateNormal];
+    
+//    [closeBtn setTitle:@"关闭" forState:UIControlStateNormal];
+    [closeBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    closeBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+    [closeBtn addTarget:self action:@selector(navigationBack:) forControlEvents:UIControlEventTouchUpInside];
+    [self.navigationController.navigationBar addSubview:closeBtn];
+    
+    
+    UIButton *customBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    customBtn.frame = CGRectMake(0, 0, 30, 30);
+    UIImage *img = [UIImage imageNamed:@"jiantou_left"];
+    [customBtn setImage:img forState:UIControlStateNormal];
+    [customBtn addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc]initWithCustomView:customBtn];
+    self.navigationItem.leftBarButtonItem = item;
+}
+
+-(void) goBack:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
